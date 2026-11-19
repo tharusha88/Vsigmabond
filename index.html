@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VSigmaBond Chemistry | A/L Chemistry Classes with Dr. Vajira Seneviratne</title>
+  <meta name="description" content="VSigmaBond Chemistry – G.C.E. A/L Chemistry theory, paper and extra classes by Dr. Vajira Seneviratne (PhD Cambridge, Senior Lecturer, University of Peradeniya). Catalyst for exceptional minds.">
+  <meta name="theme-color" content="#04074a">
+  <meta property="og:title" content="VSigmaBond Chemistry">
+  <meta property="og:description" content="Catalyst for exceptional minds – A/L Chemistry with Dr. Vajira Seneviratne.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vsigmabond.lk/">
+  <meta property="og:image" content="assets/images/hero-bg.jpg">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@1,600;1,700&family=Rajdhani:wght@600;700&family=Roboto:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="assets/images/teacher-hero.webp">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ SVG sprite (logo + icons + decorations) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="lg-swoosh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2d8cff" stop-opacity="0"/>
+      <stop offset=".35" stop-color="#4fb3ff"/>
+      <stop offset="1" stop-color="#1a5fd6" stop-opacity=".2"/>
+    </linearGradient>
+    <linearGradient id="lg-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#bcdcff"/>
+    </linearGradient>
+    <radialGradient id="rg-orb" cx="35%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".3" stop-color="#bfe5ff"/>
+      <stop offset=".75" stop-color="#5aaef5"/>
+      <stop offset="1" stop-color="#2a7ad9"/>
+    </radialGradient>
+    <linearGradient id="lg-ig" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#feda75"/>
+      <stop offset=".3" stop-color="#fa7e1e"/>
+      <stop offset=".6" stop-color="#d62976"/>
+      <stop offset="1" stop-color="#4f5bd5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Brand logo -->
+  <symbol id="logo" viewBox="0 0 250 92">
+    <g fill="#8fd0ff">
+      <circle cx="74" cy="12" r="3.2"/><circle cx="84" cy="7" r="2.4"/><circle cx="90" cy="16" r="2.8"/>
+      <path d="M74 12 L84 7 L90 16" stroke="#8fd0ff" stroke-width="1.2" fill="none"/>
+    </g>
+    <path d="M6 70 C30 92 110 88 150 58" fill="none" stroke="url(#lg-swoosh)" stroke-width="4.5" stroke-linecap="round"/>
+    <ellipse cx="44" cy="44" rx="40" ry="16" transform="rotate(-18 44 44)" fill="none" stroke="#4fb3ff" stroke-width="2" opacity=".75"/>
+    <text x="8" y="70" font-family="'Times New Roman', Georgia, serif" font-size="74" font-weight="700" fill="url(#lg-v)">V</text>
+    <text x="58" y="60" font-family="'Times New Roman', Georgia, serif" font-size="46" font-weight="700" fill="#ffffff">Σigma</text>
+    <text x="150" y="86" font-family="'Great Vibes', cursive" font-size="28" fill="#6cc4ff">Bond</text>
+  </symbol>
+
+  <!-- Icons -->
+  <symbol id="i-whatsapp" viewBox="0 0 32 32">
+    <circle cx="16" cy="16" r="16" fill="#25d366"/>
+    <path d="M16 6.6a9.3 9.3 0 0 0-8 14.1L6.8 25.4l4.8-1.2A9.3 9.3 0 1 0 16 6.6Z" fill="none" stroke="#fff" stroke-width="2"/>
+    <path d="M12.6 11.4c.3-.3.7-.3.9 0l1.1 1.5c.2.3.2.7-.1 1l-.6.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.6c.3-.3.7-.3 1-.1l1.5 1.1c.3.2.3.6 0 .9l-.7.8c-.6.6-1.5.7-2.3.4-2.3-1-4.1-2.8-5.1-5.1-.3-.8-.2-1.7.4-2.3Z" fill="#fff"/>
+  </symbol>
+  <symbol id="i-facebook" viewBox="0 0 32 32">
+    <circle cx="16" cy="16" r="16" fill="#1877f2"/>
+    <path d="M17.6 26v-8.3h2.8l.4-3.3h-3.2v-2.1c0-1 .3-1.6 1.6-1.6h1.7V7.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4h-2.8v3.3h2.8V26Z" fill="#fff"/>
+  </symbol>
+  <symbol id="i-youtube" viewBox="0 0 40 32">
+    <rect x="1" y="4" width="38" height="24" rx="7" fill="#ff0000"/>
+    <path d="M16 10.5v11l9.5-5.5Z" fill="#fff"/>
+  </symbol>
+  <symbol id="i-instagram" viewBox="0 0 32 32">
+    <rect x="1" y="1" width="30" height="30" rx="8" fill="url(#lg-ig)"/>
+    <rect x="7.5" y="7.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2.2"/>
+    <circle cx="16" cy="16" r="4" fill="none" stroke="#fff" stroke-width="2.2"/>
+    <circle cx="21.2" cy="10.8" r="1.3" fill="#fff"/>
+  </symbol>
+
+  <!-- 3D glass molecule used as background decoration -->
+  <symbol id="mol" viewBox="0 0 300 260">
+    <g stroke="#9fd2ff" stroke-width="7" stroke-linecap="round" opacity=".9">
+      <line x1="60" y1="70" x2="130" y2="110"/><line x1="130" y1="110" x2="210" y2="80"/>
+      <line x1="130" y1="110" x2="140" y2="190"/><line x1="140" y1="190" x2="230" y2="215"/>
+      <line x1="210" y1="80" x2="265" y2="30"/><line x1="140" y1="190" x2="70" y2="225"/>
+    </g>
+    <g fill="url(#rg-orb)">
+      <circle cx="60" cy="70" r="26"/><circle cx="130" cy="110" r="30"/><circle cx="210" cy="80" r="22"/>
+      <circle cx="140" cy="190" r="24"/><circle cx="230" cy="215" r="18"/><circle cx="265" cy="30" r="14"/><circle cx="70" cy="225" r="16"/>
+    </g>
+  </symbol>
+
+  <!-- Flat line molecule network (subtle pattern) -->
+  <symbol id="hexnet" viewBox="0 0 320 240">
+    <g fill="none" stroke="#7fb6ef" stroke-width="2">
+      <path d="M60 60 L90 43 L120 60 L120 95 L90 112 L60 95 Z"/>
+      <path d="M120 95 L150 112 L150 147 L120 164 L90 147 L90 112"/>
+      <path d="M120 60 L150 43 L180 60 L180 95 L150 112"/>
+      <path d="M180 95 L215 110 L245 95"/><path d="M60 95 L35 120"/><path d="M150 147 L170 185 L210 190"/>
+    </g>
+    <g fill="#9ccaf5">
+      <circle cx="60" cy="60" r="6"/><circle cx="90" cy="43" r="6"/><circle cx="120" cy="60" r="6"/><circle cx="120" cy="95" r="6"/>
+      <circle cx="90" cy="112" r="6"/><circle cx="60" cy="95" r="6"/><circle cx="150" cy="112" r="6"/><circle cx="150" cy="147" r="6"/>
+      <circle cx="120" cy="164" r="6"/><circle cx="90" cy="147" r="6"/><circle cx="150" cy="43" r="6"/><circle cx="180" cy="60" r="6"/>
+      <circle cx="180" cy="95" r="6"/><circle cx="215" cy="110" r="6"/><circle cx="245" cy="95" r="7"/><circle cx="35" cy="120" r="7"/>
+      <circle cx="170" cy="185" r="6"/><circle cx="210" cy="190" r="7"/>
+    </g>
+  </symbol>
+
+  <!-- DNA strand decoration -->
+  <symbol id="dna" viewBox="0 0 120 600">
+    <g fill="none" stroke-linecap="round">
+      <path d="M60 0 C110 50 110 100 60 150 C10 200 10 250 60 300 C110 350 110 400 60 450 C10 500 10 550 60 600" stroke="#6fb4f2" stroke-width="8"/>
+      <path d="M60 0 C10 50 10 100 60 150 C110 200 110 250 60 300 C10 350 10 400 60 450 C110 500 110 550 60 600" stroke="#a8d4fa" stroke-width="8"/>
+      <g stroke="#bfe0fb" stroke-width="3">
+        <path d="M33 30h54M24 60h72M27 90h66M40 120h40M40 180h40M27 210h66M24 240h72M33 270h54M33 330h54M24 360h72M27 390h66M40 420h40M40 480h40M27 510h66M24 540h72M33 570h54"/>
+      </g>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ============ Header ============ -->
+<header class="site-header" id="top">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" aria-label="VSigmaBond home">
+      <svg class="logo" role="img" aria-label="VSigmaBond"><use href="#logo"/></svg>
+    </a>
+
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="#home" class="is-active">Home</a>
+      <a href="#about">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#groups">Groups</a>
+      <a href="#gallery"><span class="nav-long">Our </span>Gallery</a>
+      <a href="#contact">Contact<span class="nav-long"> Us</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="socials">
+        <a class="social" href="#groups" aria-label="WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+        <a class="social" href="#" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+        <a class="social social--yt" href="#" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 40 32"><use href="#i-youtube"/></svg></a>
+      </div>
+      <a class="btn-login" href="#">Log In</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============ Hero ============ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-brand"><span class="y">VSigma</span>Bond</p>
+        <h1 class="hero-title">CHEMISTRY</h1>
+        <p class="hero-tagline">
+          <span>Catalyst for exceptional minds</span>
+          <svg class="tagline-stroke" viewBox="0 0 520 70" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M4 62 C120 36 300 14 516 8 L517 14 C320 22 140 44 8 68 Z" fill="#f2c93a"/>
+          </svg>
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-yellow" href="#classes">Join Classes</a>
+          <a class="btn btn-navy" href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <img class="hero-teacher" src="assets/images/teacher-hero.webp" width="1200" height="1481"
+           alt="Dr. Vajira Seneviratne, chemistry teacher at VSigmaBond" fetchpriority="high">
+
+      <svg class="hero-streaks" viewBox="0 0 120 160" aria-hidden="true">
+        <path d="M6 150 L114 20" stroke="#f2c93a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M40 158 L118 64" stroke="#f2c93a" stroke-width="2.5" stroke-linecap="round" opacity=".85"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ Light content area ============ -->
+  <div class="light-area">
+    <svg class="deco deco-hex-tl" aria-hidden="true"><use href="#hexnet"/></svg>
+    <svg class="deco deco-mol-tl" aria-hidden="true"><use href="#mol"/></svg>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-top">
+          <div class="about-photo reveal">
+            <div class="photo-frame">
+              <picture>
+                <source srcset="assets/images/teacher-about.webp" type="image/webp">
+                <img src="assets/images/teacher-about.jpg" width="1000" height="920" loading="lazy"
+                     alt="Dr. Vajira Seneviratne writing on the blackboard">
+              </picture>
+            </div>
+            <div class="name-tag">
+              <h3>Vajira Seneviratne</h3>
+              <p>PhD – Cambridge (UK), BSc Chemistry Special (Peradeniya)</p>
+            </div>
+          </div>
+
+          <article class="card about-card reveal">
+            <h2 class="pill pill--lg">About&nbsp; The Teacher</h2>
+            <p>Vajira&nbsp; Seneviratne completed the B.Sc. special degree in chemistry at the University of Peradeniya, Sri Lanka in 2002 with a first class. He read for the doctoral degree at the University of Cambridge, UK during the period of 2003-2006.</p>
+            <p>Upon returning to the Department of Chemistry, University of Peradeniya in 2006, he continues to work as a Senior Lecturer to date. He has served as a chief examiner for G.C.E. A/L paper marking for several years and has guided many young learners to achieve their dreams.</p>
+          </article>
+
+          <div class="exp-badge" aria-label="20+ years of experience">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <polygon fill="#ffc931" points="100.0,2.0 111.4,20.8 127.6,6.0 133.2,27.2 153.0,17.6 152.4,39.5 174.1,35.8 167.3,56.7 189.1,59.3 176.8,77.5 197.0,86.1 180.0,100.0 197.0,113.9 176.8,122.5 189.1,140.7 167.3,143.3 174.1,164.2 152.4,160.5 153.0,182.4 133.2,172.8 127.6,194.0 111.4,179.2 100.0,198.0 88.6,179.2 72.4,194.0 66.8,172.8 47.0,182.4 47.6,160.5 25.9,164.2 32.7,143.3 10.9,140.7 23.2,122.5 3.0,113.9 20.0,100.0 3.0,86.1 23.2,77.5 10.9,59.3 32.7,56.7 25.9,35.8 47.6,39.5 47.0,17.6 66.8,27.2 72.4,6.0 88.6,20.8"/>
+            </svg>
+            <span class="exp-num">20+</span>
+            <span class="exp-label">Experience</span>
+          </div>
+        </div>
+
+        <div class="about-bottom">
+          <article class="card philosophy-card reveal">
+            <h2 class="pill pill--lg">Teaching Philosophy</h2>
+            <p>I don't simply teach students what to think. I teach them how to think, give them the discipline to keep learning, and the confidence to achieve lifelong learning.</p>
+          </article>
+          <div class="about-illustration reveal">
+            <img src="assets/images/chem-illustration.svg" width="640" height="450" loading="lazy" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Class Timetable -->
+    <section class="section" id="classes">
+      <svg class="deco deco-mol-r1" aria-hidden="true"><use href="#mol"/></svg>
+      <div class="container">
+        <div class="frame reveal">
+          <h2 class="pill pill--xl frame-title">Class Timetable</h2>
+          <div class="tt-grid">
+            <div class="tt-card">
+              <h3 class="pill pill--sm">2027 Theory</h3>
+              <p class="tt-day">Saturday:</p>
+              <p class="tt-time">1pm to 5pm</p>
+            </div>
+            <div class="tt-card">
+              <h3 class="pill pill--sm">2028 Theory</h3>
+              <p class="tt-day">Saturday:</p>
+              <p class="tt-time">7.30am to 12pm</p>
+            </div>
+            <div class="tt-card">
+              <h3 class="pill pill--sm">2029 Theory</h3>
+              <p class="tt-day">Friday:</p>
+              <p class="tt-time">1.30pm to 5pm</p>
+            </div>
+            <div class="tt-card">
+              <h3 class="pill pill--sm">2027 Extra</h3>
+              <p class="tt-day">Monday:</p>
+              <p class="tt-time">7.30am to 12pm</p>
+            </div>
+            <div class="tt-card">
+              <h3 class="pill pill--sm">2027 Paper</h3>
+              <p class="tt-day">Monday:</p>
+              <p class="tt-time">1pm to 5pm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp groups -->
+    <section class="section" id="groups">
+      <svg class="deco deco-mol-r2" aria-hidden="true"><use href="#mol"/></svg>
+      <div class="container">
+        <div class="frame reveal">
+          <h2 class="pill pill--xl frame-title">Stay Connected. Learn Together</h2>
+          <p class="frame-sub">Join your respective WhatsApp group and stay updated with lessons, announcements and learning resources</p>
+          <div class="group-grid">
+            <!-- Replace each href="#" with the WhatsApp group invite link -->
+            <a class="group-card" href="#" target="_blank" rel="noopener">
+              <span class="gc-orb gc-orb--tl" aria-hidden="true"></span><span class="gc-orb gc-orb--br" aria-hidden="true"></span>
+              <span class="gc-title">2027</span>
+              <span class="gc-btn">Join Now</span>
+            </a>
+            <a class="group-card" href="#" target="_blank" rel="noopener">
+              <span class="gc-orb gc-orb--tl" aria-hidden="true"></span><span class="gc-orb gc-orb--br" aria-hidden="true"></span>
+              <span class="gc-title">2028</span>
+              <span class="gc-btn">Join Now</span>
+            </a>
+            <a class="group-card" href="#" target="_blank" rel="noopener">
+              <span class="gc-orb gc-orb--tl" aria-hidden="true"></span><span class="gc-orb gc-orb--br" aria-hidden="true"></span>
+              <span class="gc-title">2029</span>
+              <span class="gc-btn">Join Now</span>
+            </a>
+            <a class="group-card group-card--wide" href="#" target="_blank" rel="noopener">
+              <span class="gc-orb gc-orb--tl" aria-hidden="true"></span><span class="gc-orb gc-orb--br" aria-hidden="true"></span>
+              <span class="gc-title">VSigmaBond Squad</span>
+              <span class="gc-btn">Join Now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery" id="gallery">
+      <svg class="deco deco-dna" aria-hidden="true"><use href="#dna"/></svg>
+      <div class="container">
+        <div class="frame frame--gallery reveal">
+          <h2 class="pill pill--xl frame-title">Gallery</h2>
+          <!-- Gallery photos: replace the files in assets/images/gallery/ -->
+          <div class="gallery-grid">
+            <figure class="g-item">
+              <img src="assets/images/gallery/gallery-1.jpg" width="1200" height="800" loading="lazy" alt="Students celebrating at Vajira Sir's farewell">
+            </figure>
+            <figure class="g-item">
+              <img src="assets/images/gallery/gallery-2.jpg" width="1167" height="519" loading="lazy" alt="VSigmaBond students group photo at the farewell">
+            </figure>
+          </div>
+          <a class="btn-outline" href="#">See More</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img class="footer-illus" src="assets/images/chem-illustration.svg" width="640" height="450" loading="lazy" alt="">
+      <a class="brand footer-logo" href="#home" aria-label="VSigmaBond home">
+        <svg class="logo" role="img" aria-label="VSigmaBond"><use href="#logo"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-head">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#groups">Groups</a></li>
+        <li><a href="#gallery">Our Gallery</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-head">Contact Info</h4>
+      <div class="contact-item">
+        <strong>Contact No:</strong>
+        <a href="tel:+94770000123">+94 77 0000 123</a>
+      </div>
+      <div class="contact-item">
+        <strong>Email Address:</strong>
+        <a href="mailto:vsigmabond@gmail.com">vsigmabond@gmail.com</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+        <a href="#groups" aria-label="WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="YouTube" class="yt"><svg viewBox="0 0 40 32"><use href="#i-youtube"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">© <span id="year">2026</span> VSigmaBond Chemistry. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
