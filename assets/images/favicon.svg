@@ -1,5 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#07084a"/>
-  <ellipse cx="32" cy="34" rx="25" ry="10" transform="rotate(-18 32 34)" fill="none" stroke="#4fb3ff" stroke-width="2.5"/>
-  <text x="32" y="47" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="40" font-weight="700" fill="#ffffff">Σ</text>
+  <!-- VSigmaBond logo mark: serif "V" + orbit swoosh + Σ + molecule dots -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d2180"/>
+      <stop offset="1" stop-color="#03053d"/>
+    </linearGradient>
+    <linearGradient id="v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#bcdcff"/>
+    </linearGradient>
+    <linearGradient id="sw" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2d8cff" stop-opacity=".25"/>
+      <stop offset=".45" stop-color="#5fc0ff"/>
+      <stop offset="1" stop-color="#1a5fd6" stop-opacity=".35"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <ellipse cx="29" cy="33" rx="25" ry="10" transform="rotate(-18 29 33)" fill="none" stroke="#4fb3ff" stroke-width="2.4" opacity=".85"/>
+  <path d="M5 50 C18 61 44 59 59 43" fill="none" stroke="url(#sw)" stroke-width="3.2" stroke-linecap="round"/>
+  <text x="3" y="50" font-family="'Times New Roman', Georgia, serif" font-size="50" font-weight="700" fill="url(#v)">V</text>
+  <text x="35" y="46" font-family="'Times New Roman', Georgia, serif" font-size="29" font-weight="700" fill="#ffffff">Σ</text>
+  <path d="M44 13 L52 8 L57 16" fill="none" stroke="#8fd0ff" stroke-width="1.4"/>
+  <g fill="#8fd0ff">
+    <circle cx="44" cy="13" r="3"/>
+    <circle cx="52" cy="8" r="2.3"/>
+    <circle cx="57" cy="16" r="2.6"/>
+  </g>
 </svg>
