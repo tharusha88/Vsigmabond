@@ -319,7 +319,7 @@
       <h4 class="footer-head">Contact Info</h4>
       <div class="contact-item">
         <strong>Contact No:</strong>
-        <a href="https://wa.me/94772562230" target="_blank" rel="noopener" aria-label="Chat on WhatsApp: +94 77 256 2230">+94 77 256 2230</a>
+        <a href="https://wa.me/94707840259" target="_blank" rel="noopener" data-wa-popup aria-haspopup="dialog" aria-label="Send a WhatsApp message to +94 70 784 0259">+94 70 784 0259</a>
       </div>
       <div class="contact-item">
         <strong>Email Address:</strong>
@@ -338,6 +338,44 @@
   </div>
 </footer>
 
+<!-- ============ WhatsApp message popup (opened from the footer number) ============ -->
+<dialog class="wa-modal" id="wa-modal" data-wa-number="94707840259" aria-labelledby="wa-modal-title">
+  <div class="wa-head">
+    <h2 id="wa-modal-title">Send us a message</h2>
+    <p>We'll reply on WhatsApp: <span>+94 70 784 0259</span></p>
+    <button type="button" class="wa-close" data-wa-close aria-label="Close">&times;</button>
+  </div>
+  <form class="wa-form" id="wa-form">
+    <div class="wa-field">
+      <label for="wa-name">Name</label>
+      <input id="wa-name" name="name" type="text" autocomplete="name" maxlength="80" required autofocus>
+    </div>
+    <div class="wa-field">
+      <label for="wa-email">Email <span>(optional)</span></label>
+      <input id="wa-email" name="email" type="email" autocomplete="email" maxlength="120">
+    </div>
+    <div class="wa-field">
+      <label for="wa-class">Class</label>
+      <select id="wa-class" name="class" required>
+        <option value="">Select a class</option>
+        <option>2027 Theory</option>
+        <option>2027 Paper</option>
+        <option>2027 Extra</option>
+        <option>2028 Theory</option>
+        <option>2029 Theory</option>
+        <option>Other / general enquiry</option>
+      </select>
+    </div>
+    <div class="wa-field">
+      <label for="wa-message">Message</label>
+      <textarea id="wa-message" name="message" rows="3" maxlength="1000" required></textarea>
+    </div>
+    <button type="submit" class="wa-send"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Send on WhatsApp</button>
+    <p class="wa-note">WhatsApp opens with your message ready. Just tap send.</p>
+  </form>
+</dialog>
+
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/wa-popup.js" defer></script>
 </body>
 </html>
