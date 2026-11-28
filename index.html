@@ -23,6 +23,7 @@
   <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
   <link rel="preload" as="image" href="assets/images/teacher-hero.webp">
   <link rel="stylesheet" href="assets/css/style.css?v=20261127">
+  <link rel="stylesheet" href="assets/css/contact-modal.css?v=20261128">
 </head>
 <body>
 
@@ -86,6 +87,20 @@
     <circle cx="21.2" cy="10.8" r="1.3" fill="#fff"/>
   </symbol>
 
+  <!-- Line icons for the Contact Us popup (use currentColor) -->
+  <symbol id="i-chat" viewBox="0 0 24 24">
+    <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M9.2 8.3c.2-.2.5-.2.7 0l.9 1.2c.2.2.2.5 0 .7l-.5.5c.5 1 1.3 1.8 2.3 2.3l.5-.5c.2-.2.5-.2.7 0l1.2.9c.2.2.2.5 0 .7l-.6.6c-.5.5-1.2.6-1.9.3-1.9-.8-3.4-2.3-4.2-4.2-.3-.7-.2-1.4.3-1.9Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24">
+    <rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M4 7.5l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24">
+    <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  </symbol>
+
   <!-- 3D glass molecule used as background decoration -->
   <symbol id="mol" viewBox="0 0 300 260">
     <g stroke="#9fd2ff" stroke-width="7" stroke-linecap="round" opacity=".9">
@@ -129,7 +144,7 @@
       <a href="#about">About</a>
       <a href="#classes">Classes</a>
       <a href="#groups">Groups</a>
-      <a href="#contact">Contact<span class="nav-long"> Us</span></a>
+      <a href="#contact" data-contact-open aria-haspopup="dialog">Contact<span class="nav-long"> Us</span></a>
     </nav>
 
     <div class="header-actions">
@@ -158,7 +173,7 @@
         </p>
         <div class="hero-cta">
           <a class="btn btn-yellow" href="#classes">Join Classes</a>
-          <a class="btn btn-navy" href="#contact">Contact Us</a>
+          <a class="btn btn-navy" href="#contact" data-contact-open aria-haspopup="dialog">Contact Us</a>
         </div>
       </div>
 
@@ -319,11 +334,11 @@
       <h4 class="footer-head">Contact Info</h4>
       <div class="contact-item">
         <strong>Contact No:</strong>
-        <a href="https://wa.me/94707840259" target="_blank" rel="noopener" data-wa-popup aria-haspopup="dialog" aria-label="Send a WhatsApp message to +94 70 784 0259">+94 70 784 0259</a>
+        <a href="https://wa.me/94707840259" target="_blank" rel="noopener" data-contact-open aria-haspopup="dialog" aria-label="Contact us: +94 70 784 0259">+94 70 784 0259</a>
       </div>
       <div class="contact-item">
         <strong>Email Address:</strong>
-        <a href="mailto:vsigmabond@gmail.com">vsigmabond@gmail.com</a>
+        <a href="mailto:vsigmabond@gmail.com" data-gmail="vsigmabond@gmail.com">vsigmabond@gmail.com</a>
       </div>
       <div class="footer-socials">
         <a href="https://wa.me/94772562230" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
@@ -338,44 +353,82 @@
   </div>
 </footer>
 
-<!-- ============ WhatsApp message popup (opened from the footer number) ============ -->
-<dialog class="wa-modal" id="wa-modal" data-wa-number="94707840259" aria-labelledby="wa-modal-title">
-  <div class="wa-head">
-    <h2 id="wa-modal-title">Send us a message</h2>
-    <p>We'll reply on WhatsApp: <span>+94 70 784 0259</span></p>
-    <button type="button" class="wa-close" data-wa-close aria-label="Close">&times;</button>
+<!-- ============ Contact Us popup (opened from the navbar, the hero and the footer number) ============ -->
+<dialog class="contact-modal" id="contact-modal" data-wa-number="94707840259" aria-labelledby="cm-title">
+  <div class="cm-head">
+    <h2 class="cm-title" id="cm-title">Contact Us</h2>
+    <button type="button" class="cm-close" data-cm-close aria-label="Close">&times;</button>
   </div>
-  <form class="wa-form" id="wa-form">
-    <div class="wa-field">
-      <label for="wa-name">Name</label>
-      <input id="wa-name" name="name" type="text" autocomplete="name" maxlength="80" required autofocus>
+
+  <div class="cm-body">
+    <!-- Left: support channels + map -->
+    <div class="cm-info">
+      <a class="cm-card" href="https://wa.me/94707840259" target="_blank" rel="noopener">
+        <span class="cm-icon" aria-hidden="true"><svg><use href="#i-chat"/></svg></span>
+        <span class="cm-text">
+          <strong>WhatsApp</strong>
+          <span>+94 70 784 0259</span>
+          <small>Message us anytime</small>
+        </span>
+      </a>
+      <a class="cm-card" href="mailto:vsigmabond@gmail.com" data-gmail="vsigmabond@gmail.com">
+        <span class="cm-icon" aria-hidden="true"><svg><use href="#i-mail"/></svg></span>
+        <span class="cm-text">
+          <strong>Email</strong>
+          <span>vsigmabond@gmail.com</span>
+          <small>Write to us anytime</small>
+        </span>
+      </a>
+      <a class="cm-card" href="https://share.google/cHr4awl7zTy7lFiLE" target="_blank" rel="noopener">
+        <span class="cm-icon" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+        <span class="cm-text">
+          <strong>Location</strong>
+          <span>IMS - Higher Education Center<br>Kandy - Colombo Rd, Kandy</span>
+          <small>Open in Google Maps</small>
+        </span>
+      </a>
+      <div class="cm-map">
+        <iframe title="Map: IMS - Higher Education Center, Kandy"
+                src="https://maps.google.com/maps?q=IMS+-+Higher+Education+Center,+Kandy+-+Colombo+Rd,+Kandy&amp;ll=7.2851031,80.6260274&amp;z=16&amp;output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="wa-field">
-      <label for="wa-email">Email <span>(optional)</span></label>
-      <input id="wa-email" name="email" type="email" autocomplete="email" maxlength="120">
-    </div>
-    <div class="wa-field">
-      <label for="wa-class">Class</label>
-      <select id="wa-class" name="class" required>
-        <option value="">Select a class</option>
-        <option>2027 Theory</option>
-        <option>2027 Paper</option>
-        <option>2027 Extra</option>
-        <option>2028 Theory</option>
-        <option>2029 Theory</option>
-        <option>Other / general enquiry</option>
-      </select>
-    </div>
-    <div class="wa-field">
-      <label for="wa-message">Message</label>
-      <textarea id="wa-message" name="message" rows="3" maxlength="1000" required></textarea>
-    </div>
-    <button type="submit" class="wa-send"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Send on WhatsApp</button>
-    <p class="wa-note">WhatsApp opens with your message ready. Just tap send.</p>
-  </form>
+
+    <!-- Right: message form (opens WhatsApp with the message ready to send) -->
+    <form class="cm-form" id="cm-form">
+      <p class="cm-eyebrow">Send a message</p>
+      <div class="cm-row">
+        <div class="cm-field">
+          <label for="cm-name">Name</label>
+          <input id="cm-name" name="name" type="text" placeholder="Your name" autocomplete="name" maxlength="80" required>
+        </div>
+        <div class="cm-field">
+          <label for="cm-reach">Phone or email</label>
+          <input id="cm-reach" name="reach" type="text" placeholder="How to reach you" maxlength="120">
+        </div>
+      </div>
+      <div class="cm-field">
+        <label for="cm-subject">Subject</label>
+        <select id="cm-subject" name="subject">
+          <option>General question</option>
+          <option>Class enrollment</option>
+          <option>Class timetable</option>
+          <option>WhatsApp groups</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="cm-field">
+        <label for="cm-message">Message</label>
+        <textarea id="cm-message" name="message" rows="4" placeholder="How can we help?" maxlength="1000" required></textarea>
+      </div>
+      <button type="submit" class="cm-send">Send message <span aria-hidden="true">&rarr;</span></button>
+      <p class="cm-note">Your message opens in WhatsApp, ready to send. For urgent questions, call <a href="tel:+94707840259">+94 70 784 0259</a>.</p>
+    </form>
+  </div>
 </dialog>
 
 <script src="assets/js/main.js?v=20261127" defer></script>
-<script src="assets/js/wa-popup.js?v=20261127" defer></script>
+<script src="assets/js/contact-modal.js?v=20261128" defer></script>
+<script src="assets/js/gmail-link.js?v=20261128" defer></script>
 </body>
 </html>

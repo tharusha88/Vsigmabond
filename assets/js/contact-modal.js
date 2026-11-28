@@ -1,45 +1,47 @@
-/* WhatsApp message popup
-   Clicking a [data-wa-popup] link opens the form; submitting it opens WhatsApp
-   with the visitor's message pre-filled for the number in data-wa-number.
-   Without <dialog> support (or JS) the link still opens WhatsApp directly. */
+/* Contact Us popup
+   Clicking any [data-contact-open] element opens the popup. Submitting the form
+   opens WhatsApp with the visitor's message pre-filled for the number in
+   data-wa-number. Without <dialog> support (or JS) the triggers still fall back to
+   their href (#contact, or WhatsApp for the footer number). */
 (function () {
   'use strict';
 
-  var dialog = document.getElementById('wa-modal');
-  var form = document.getElementById('wa-form');
+  var dialog = document.getElementById('contact-modal');
+  var form = document.getElementById('cm-form');
   if (!dialog || !form || typeof dialog.showModal !== 'function') return;
 
   var number = dialog.getAttribute('data-wa-number');
 
-  document.querySelectorAll('[data-wa-popup]').forEach(function (link) {
-    link.addEventListener('click', function (e) {
+  document.querySelectorAll('[data-contact-open]').forEach(function (trigger) {
+    trigger.addEventListener('click', function (e) {
       e.preventDefault();
       dialog.showModal();
+      dialog.scrollTop = 0;
     });
   });
 
-  dialog.querySelector('[data-wa-close]').addEventListener('click', function () {
+  dialog.querySelector('[data-cm-close]').addEventListener('click', function () {
     dialog.close();
   });
 
   /* Close when clicking the dimmed backdrop (but not when a text selection
-     that started inside the form ends outside it) */
+     that started inside the popup ends outside it) */
   var downOnBackdrop = false;
   dialog.addEventListener('mousedown', function (e) { downOnBackdrop = e.target === dialog; });
   dialog.addEventListener('click', function (e) {
     if (downOnBackdrop && e.target === dialog) dialog.close();
   });
 
-  var nameField = document.getElementById('wa-name');
-  var emailField = document.getElementById('wa-email');
-  var classField = document.getElementById('wa-class');
-  var messageField = document.getElementById('wa-message');
+  var nameField = document.getElementById('cm-name');
+  var reachField = document.getElementById('cm-reach');
+  var subjectField = document.getElementById('cm-subject');
+  var messageField = document.getElementById('cm-message');
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var name = nameField.value.trim();
-    var email = emailField.value.trim();
-    var className = classField.value;
+    var reach = reachField.value.trim();
+    var subject = subjectField.value;
     var message = messageField.value.trim();
 
     /* fields filled with spaces only pass the browser's "required" check */
@@ -53,8 +55,8 @@
       '',
       '*Name:* ' + name
     ];
-    if (email) lines.push('*Email:* ' + email);
-    lines.push('*Class:* ' + className);
+    if (reach) lines.push('*Contact:* ' + reach);
+    lines.push('*Subject:* ' + subject);
     lines.push('*Message:* ' + message);
 
     var url = 'https://wa.me/' + number + '?text=' + encodeURIComponent(lines.join('\n'));
